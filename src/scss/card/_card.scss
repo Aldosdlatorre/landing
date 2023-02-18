@@ -1,0 +1,83 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.card{
+    background-color: var.$primario;
+    display: flex;
+    flex-direction: column;
+    margin: 15rem auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    @include mix.desktop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__imagen{
+        position: relative;
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            background-color: var.$secundario;
+            opacity: .6;
+            display: block;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
+.info{
+    padding: 6rem 4rem;
+    text-align: center;
+    @include mix.desktop {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    &__heading{
+        color: var.$blanco;
+        span{
+            color: var.$secundario;
+        }
+        font-size: 4.6rem;
+    }
+
+    &__text{
+        color: var.$blancoTransparente;
+        font-size: 2.4rem;
+        padding: 4rem 0;
+    }
+
+    &__grid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        @include mix.desktop {
+            flex-direction: row;
+        }
+        .element{
+            &__heading{
+                color: var.$blanco;
+                font-size: 4rem;
+                text-transform: uppercase;
+                font-family: var.$fuentePrincipal;
+            }
+
+            span{
+                display: block;
+                font-size: 2rem;
+                font-weight: 400;
+                color: var.$blancoTransparente;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
