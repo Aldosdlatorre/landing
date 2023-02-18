@@ -75,8 +75,10 @@ p {
 }
 
 .info {
+  max-width: 50rem;
+  margin: 0 auto;
   padding: 6rem 4rem;
-  text-align: center;
+  text-align: left;
 }
 @media (min-width: 992px) {
   .info {
@@ -86,22 +88,22 @@ p {
 }
 .info__heading {
   color: #FFFFFF;
-  font-size: 4.6rem;
+  font-size: 3.6rem;
 }
 .info__heading span {
   color: hsl(277, 64%, 61%);
 }
 .info__text {
   color: hsla(0, 0%, 100%, 0.6);
-  font-size: 2.4rem;
-  padding: 4rem 0;
+  font-size: 1.6rem;
+  padding: 3rem 0;
 }
 .info__grid {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 4rem;
+  margin-top: 4rem;
 }
 @media (min-width: 992px) {
   .info__grid {
@@ -110,13 +112,13 @@ p {
 }
 .info__grid .element__heading {
   color: #FFFFFF;
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
   font-family: "Inter", sans-serif;
 }
 .info__grid .element span {
   display: block;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 400;
   color: hsla(0, 0%, 100%, 0.6);
   margin-top: 1rem;

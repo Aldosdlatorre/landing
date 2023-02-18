@@ -34,8 +34,10 @@
 }
 
 .info{
+    max-width: 50rem;
+    margin: 0 auto;
     padding: 6rem 4rem;
-    text-align: center;
+    text-align: left;
     @include mix.desktop {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
@@ -45,35 +47,35 @@
         span{
             color: var.$secundario;
         }
-        font-size: 4.6rem;
+        font-size: 3.6rem;
     }
 
     &__text{
         color: var.$blancoTransparente;
-        font-size: 2.4rem;
-        padding: 4rem 0;
+        font-size: 1.6rem;
+        padding: 3rem 0;
     }
 
     &__grid{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         gap: 4rem;
+        margin-top: 4rem;
         @include mix.desktop {
             flex-direction: row;
         }
         .element{
             &__heading{
                 color: var.$blanco;
-                font-size: 4rem;
+                font-size: 3rem;
                 text-transform: uppercase;
                 font-family: var.$fuentePrincipal;
             }
 
             span{
                 display: block;
-                font-size: 2rem;
+                font-size: 1.6rem;
                 font-weight: 400;
                 color: var.$blancoTransparente;
                 margin-top: 1rem;
